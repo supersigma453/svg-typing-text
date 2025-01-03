@@ -1,0 +1,19 @@
+name: 'Text to Typing SVG'
+description: 'Generate a typing animation SVG for a README'
+
+inputs:
+    text:
+        description: 'Text to animate'
+        required: true
+    font:
+        description: 'Font to use'
+        default: 'Arial'
+    font-size:
+        description: 'Font size'
+        default: 20
+outputs:
+    svg:
+        description: 'Generated SVG content'
+runs:
+    using: 'node16'
+    main: 'dist/index.js'

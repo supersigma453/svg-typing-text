@@ -1,7 +1,40 @@
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="400" height="50">
-    <text x="10" y="30" font-family="" font-size="">
-      <tspan>undefined</tspan>
-    </text>
-  </svg>
+    <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 600 500"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1">
+          <path id="animate-text" d="M0,110 H0" />
+
+          <text
+            fill="white"
+            font-family="Arial"
+            font-size="60">
+              <textPath xlink:href="#animate-text">Welcome,Lol</textPath>
+          </text>
+
+          <!-- Typing Animation -->
+          <animate
+            xlink:href="#animate-text"
+            attributeName="d"
+            from="M0,110 H0"
+            to="M0,110 H1100"
+            dur="2s"
+            begin="0s; delete.end+1s"
+            fill="freeze" 
+            id="typing" />
+
+          <!-- Deleting Animation -->
+          <animate
+            xlink:href="#animate-text"
+            attributeName="d"
+            from="M0,110 H1100"
+            to="M0,110 H0"
+            dur="2s"
+            begin="typing.end+1s"
+            fill="freeze" 
+            id="delete" />
+    </svg>
   

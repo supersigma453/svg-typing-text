@@ -27,6 +27,6 @@ jobs:
           apt install git -y
           git config --local user.email "github-actions-${{ github.event.repository.name }}@users.noreply.github.com"
           git config --local user.name github-actions[bot]
-          git add README.md
+          git add README.md typing.svg
           git diff --quiet && git diff --staged --quiet || git commit -m "Updated with Typing"
           git push
